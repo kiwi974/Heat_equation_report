@@ -1,0 +1,7 @@
+i=1;
+while read line;
+do
+    xterm -hold -e ssh $line "cd 2A/Systemes_concurrents/Integration_Hadoop/src/java hdfs.HdfsServeur 8084" &
+    echo "Serveur $i lancé";
+    let i=$i+1;
+done < ..config/daemons.txt

@@ -1,0 +1,21 @@
+						FileInputStream fis = new FileInputStream(f_lect);
+						Reader reader = new InputStreamReader(fis, "utf8");
+
+						try {
+
+							StringBuilder builder = new StringBuilder();
+							char[] buffer = new char[512];
+							int nbRead = reader.read(buffer);
+
+							while (nbRead > 0) {
+								builder.append(buffer, 0, nbRead);
+								nbRead = reader.read(buffer);
+							}
+
+							contenuFichier = builder.toString();
+
+							System.out.println("On a lu " + contenuFichier + " dans le fichier " + contenu[1]);
+
+						} finally {
+							reader.close();
+						}

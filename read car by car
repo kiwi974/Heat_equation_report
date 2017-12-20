@@ -1,0 +1,38 @@
+				int i = 0;
+				
+				while ( (compteurChar <= taille) && ((i = br.read())!= -1)) {
+					char b = (char) i;
+					
+					if (contenu == null) {
+						contenu = Character.toString(b);
+					} else {
+						contenu = contenu + Character.toString(b);
+					}
+					
+					compteurChar++;
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+								String lu = br.readLine();
+				StringTokenizer st = new StringTokenizer(lu);
+				
+				while ((compteurChar < taille) && (lu != null)) {
+					String mot = st.nextToken();
+					if (contenu == null) {
+						contenu = mot;
+					} else {
+						contenu = contenu + mot;
+					}
+					//System.out.println("Buffer récupéré");
+					compteurChar = compteurChar + mot.length();
+					if (!st.hasMoreTokens()){
+						lu = br.readLine();
+						st = new StringTokenizer(lu);
+					}
+				}

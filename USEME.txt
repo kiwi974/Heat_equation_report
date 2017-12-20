@@ -1,0 +1,10 @@
+Pour utiliser l'application :
+	- se placer dans le sous dossier src contenant les sources 
+	- taper la commande ../config/launch.sh
+	- taper la commande ../config/serveur.sh
+	- une fois tout bien démarré (attendre que tous les serveurs 
+	  et démons se soient affiché), taper la commande java 
+  	  application.MyMapReduce ichich(pour le moment le nom du 
+	  fichier passé en argument doit être modifié dans le code de
+	  Job directement, dans le package ordo, ligne 149, deuxième 
+          argument de HdfsWrite)
